@@ -64,7 +64,7 @@ jobs:
         - docker-compose -f docker-compose-gradle.yaml pull --ignore-pull-failures
         - docker-compose -f docker-compose-gradle.yaml up &
         - wait_for 8080
-        - sleep 10s
+        - sleep 25s
         - http get  :8080
         - http post :8080
         - http get  :8080
@@ -79,6 +79,7 @@ jobs:
       name: maven integration tests
       script:
         - cd $TRAVIS_BUILD_DIR
+        - ./mvnw
         - bash target/*-SNAPSHOT.jar &
         - wait_for 8080
         - http get  :8080
@@ -93,11 +94,11 @@ jobs:
       name: maven integration tests in docker (openjdk11)
       script:
         - cd $TRAVIS_BUILD_DIR
-        - ./gradlew
+        - ./mvnw
         - docker-compose -f docker-compose-maven.yaml pull --ignore-pull-failures
         - docker-compose -f docker-compose-maven.yaml up &
         - wait_for 8080
-        - sleep 10s
+        - sleep 25s
         - http get  :8080
         - http post :8080
         - http get  :8080
