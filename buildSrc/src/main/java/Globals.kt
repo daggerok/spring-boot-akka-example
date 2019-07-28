@@ -11,6 +11,7 @@ object Globals {
   const val scalaMajorVersion = "2.13" // "2.12"
   const val reactiveStreamsVersion = "1.0.2"
   const val akkaVersion = "2.6.0-M5"
+  const val scalatestVersion = "3.0.8"
 
   val javaVersion = JavaVersion.VERSION_1_8
   const val vavrVersion = "0.10.0"

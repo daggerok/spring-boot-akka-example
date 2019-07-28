@@ -66,6 +66,7 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("io.projectreactor:reactor-test")
 
+  testImplementation("org.scalatest:scalatest_${Globals.scalaMajorVersion}:${Globals.scalatestVersion}")
   testImplementation(platform("org.junit:junit-bom:${Globals.junitJupiterVersion}"))
   testImplementation("org.junit.jupiter:junit-jupiter")
   testImplementation("junit:junit")

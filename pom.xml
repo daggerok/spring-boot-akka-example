@@ -29,17 +29,20 @@
     <recompileMode>incremental</recompileMode>
     <scala-maven-plugin.version>4.1.1</scala-maven-plugin.version>
 
+    <scalatest.version>3.0.8</scalatest.version>
+    <scalatest-maven-plugin.version>2.0.0</scalatest-maven-plugin.version>
+
     <akka.version>2.6.0-M5</akka.version>
     <ssl-config.version>0.4.0</ssl-config.version>
     <reactive-streams.version>1.0.2</reactive-streams.version>
 
     <vavr.version>0.10.0</vavr.version>
     <junit-jupiter.version>5.5.1</junit-jupiter.version>
+    <maven-source-plugin.version>3.1.0</maven-source-plugin.version>
     <spring-boot.version>${project.parent.version}</spring-boot.version>
-    <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
-    <maven-source-plugin.version>3.1.0</maven-source-plugin.version>
+    <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -143,7 +146,7 @@
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.compat.version}</artifactId>
-      <version>3.0.8</version>
+      <version>${scalatest.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -249,7 +252,7 @@
       <plugin>
         <groupId>org.scalatest</groupId>
         <artifactId>scalatest-maven-plugin</artifactId>
-        <version>2.0.0</version>
+        <version>${scalatest-maven-plugin.version}</version>
         <configuration>
           <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
           <junitxml>.</junitxml>
