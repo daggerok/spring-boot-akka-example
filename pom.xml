@@ -185,7 +185,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${spring-boot.version}</version>
         <configuration>
-          <executable>false</executable>
+          <executable>true</executable>
         </configuration>
       </plugin>
 
