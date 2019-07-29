@@ -80,7 +80,7 @@ jobs:
       script:
         - cd $TRAVIS_BUILD_DIR
         - ./mvnw
-        - java -jar target/*-SNAPSHOT.jar &
+        - bash target/*-SNAPSHOT.jar &
         - wait_for 8080
         - http get  :8080
         - http post :8080
