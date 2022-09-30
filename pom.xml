@@ -24,7 +24,7 @@
     <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
-    <scala.version>2.13.0</scala.version>
+    <scala.version>2.13.9</scala.version>
     <scala.compat.version>2.13</scala.compat.version>
     <recompileMode>incremental</recompileMode>
     <scala-maven-plugin.version>4.1.1</scala-maven-plugin.version>
